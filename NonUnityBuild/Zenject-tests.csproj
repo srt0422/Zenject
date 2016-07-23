@@ -1,0 +1,597 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{34E27462-3046-4DC7-A7FA-45E4F4F7D413}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Zenject_tests</RootNamespace>
+    <AssemblyName>Zenject-tests</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+    <BaseIntermediateOutputPath>..\..\..\..\..\..\NonUnityBuild\Temp\Debug</BaseIntermediateOutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <IntermediateOutputPath>..\..\..\..\..\..\NonUnityBuild\Temp\Debug\</IntermediateOutputPath>
+    <BaseIntermediateOutputPath>..\..\..\..\..\..\NonUnityBuild\Temp\Debug\</BaseIntermediateOutputPath>
+    <OutputPath>..\..\..\..\..\..\NonUnityBuild\Bin\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;NOT_UNITY3D</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <IntermediateOutputPath>..\..\..\..\..\..\NonUnityBuild\Temp\Release\</IntermediateOutputPath>
+    <BaseIntermediateOutputPath>..\..\..\..\..\..\NonUnityBuild\Temp\Release\</BaseIntermediateOutputPath>
+    <OutputPath>..\..\..\..\..\..\NonUnityBuild\Bin\Release\</OutputPath>
+    <DefineConstants>TRACE;NOT_UNITY3D</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="nunit.core">
+      <HintPath>..\..\..\..\..\..\NonUnityBuild\Libraries\NUnit\nunit.core.dll</HintPath>
+    </Reference>
+    <Reference Include="nunit.framework, Version=2.6.0.12051, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\NonUnityBuild\Libraries\NUnit\nunit.framework.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UnityEditor">
+      <HintPath>..\..\..\..\..\..\..\..\..\..\..\Program Files\Unity\Editor\Data\Managed\UnityEditor.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine">
+      <HintPath>..\..\..\..\..\..\..\..\..\..\..\Program Files\Unity\Editor\Data\Managed\UnityEngine.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Source\Zenject.csproj">
+      <Project>{46f25a62-2e29-48cb-95f3-bdbcb0976ddc}</Project>
+      <Name>Zenject</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\CommandsAndSignals\Zenject.Commands.csproj">
+      <Project>{b543a0b8-2630-424e-b628-53457be4884b}</Project>
+      <Name>Zenject.Commands</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="OptionalExtras\UnitTests\Editor\BindFeatures\TestMultipleContractTypes.cs">
+      <Link>Editor\BindFeatures\TestMultipleContractTypes.cs</Link>
+    </Compile>
+    <Compile Include="OptionalExtras\UnitTests\Editor\BindFeatures\TestMultipleContractTypes2.cs">
+      <Link>Editor\BindFeatures\TestMultipleContractTypes2.cs</Link>
+    </Compile>
+    <Compile Include="OptionalExtras\UnitTests\Editor\BindFeatures\TestMultipleContractTypes3.cs">
+      <Link>Editor\BindFeatures\TestMultipleContractTypes3.cs</Link>
+    </Compile>
+    <Compile Include="OptionalExtras\UnitTests\Editor\BindFeatures\TestNonLazy.cs">
+      <Link>Editor\BindFeatures\TestNonLazy.cs</Link>
+    </Compile>
+    <Compile Include="OptionalExtras\UnitTests\Editor\BindFeatures\TestRebind.cs">
+      <Link>Editor\BindFeatures\TestRebind.cs</Link>
+    </Compile>
+    <Compile Include="OptionalExtras\UnitTests\Editor\BindFeatures\TestUnbind.cs">
+      <Link>Editor\BindFeatures\TestUnbind.cs</Link>
+    </Compile>
+    <Compile Include="OptionalExtras\UnitTests\Editor\BindFeatures\TestWithArguments.cs">
+      <Link>Editor\BindFeatures\TestWithArguments.cs</Link>
+    </Compile>
+    <Compile Include="OptionalExtras\UnitTests\Editor\Bindings\TestTo.cs">
+      <Link>Editor\Bindings\TestTo.cs</Link>
+    </Compile>
+    <Compile Include="OptionalExtras\UnitTests\Editor\Bindings\TestToFactory.cs">
+      <Link>Editor\Bindings\TestToFactory.cs</Link>
+    </Compile>
+    <Compile Include="OptionalExtras\UnitTests\Editor\Bindings\TestToGetter.cs">
+      <Link>Editor\Bindings\TestToGetter.cs</Link>
+    </Compile>
+    <Compile Include="OptionalExtras\UnitTests\Editor\Bindings\TestToInstance.cs">
+      <Link>Editor\Bindings\TestToInstance.cs</Link>
+    </Compile>
+    <Compile Include="OptionalExtras\UnitTests\Editor\Bindings\TestToMethod.cs">
+      <Link>Editor\Bindings\TestToMethod.cs</Link>
+    </Compile>
+    <Compile Include="OptionalExtras\UnitTests\Editor\Bindings\TestToResolve.cs">
+      <Link>Editor\Bindings\TestToResolve.cs</Link>
+    </Compile>
+    <Compile Include="OptionalExtras\UnitTests\Editor\Bindings\TestToSubContainerInstaller.cs">
+      <Link>Editor\Bindings\TestToSubContainerInstaller.cs</Link>
+    </Compile>
+    <Compile Include="OptionalExtras\UnitTests\Editor\Bindings\TestToSubContainerMethod.cs">
+      <Link>Editor\Bindings\TestToSubContainerMethod.cs</Link>
+    </Compile>
+    <Compile Include="OptionalExtras\UnitTests\Editor\Commands\TestCommandsOne.cs">
+      <Link>Editor\Commands\TestCommandsOne.cs</Link>
+    </Compile>
+    <Compile Include="OptionalExtras\UnitTests\Editor\Commands\TestCommandsZero.cs">
+      <Link>Editor\Commands\TestCommandsZero.cs</Link>
+    </Compile>
+    <Compile Include="OptionalExtras\UnitTests\Editor\Conditions\TestConditionsBasic.cs">
+      <Link>Editor\Conditions\TestConditionsBasic.cs</Link>
+    </Compile>
+    <Compile Include="OptionalExtras\UnitTests\Editor\Conditions\TestConditionsComplex.cs">
+      <Link>Editor\Conditions\TestConditionsComplex.cs</Link>
+    </Compile>
+    <Compile Include="OptionalExtras\UnitTests\Editor\Conditions\TestConditionsFieldName.cs">
+      <Link>Editor\Conditions\TestConditionsFieldName.cs</Link>
+    </Compile>
+    <Compile Include="OptionalExtras\UnitTests\Editor\Conditions\TestConditionsIdentifier.cs">
+      <Link>Editor\Conditions\TestConditionsIdentifier.cs</Link>
+    </Compile>
+    <Compile Include="OptionalExtras\UnitTests\Editor\Conditions\TestConditionsParents.cs">
+      <Link>Editor\Conditions\TestConditionsParents.cs</Link>
+    </Compile>
+    <Compile Include="OptionalExtras\UnitTests\Editor\Conditions\TestConditionsTarget.cs">
+      <Link>Editor\Conditions\TestConditionsTarget.cs</Link>
+    </Compile>
+    <Compile Include="OptionalExtras\UnitTests\Editor\Conditions\TestConditionsTargetInstance.cs">
+      <Link>Editor\Conditions\TestConditionsTargetInstance.cs</Link>
+    </Compile>
+    <Compile Include="OptionalExtras\UnitTests\Editor\Conditions\TestIdentifiers.cs">
+      <Link>Editor\Conditions\TestIdentifiers.cs</Link>
+    </Compile>
+    <Compile Include="OptionalExtras\UnitTests\Editor\Conventions\Foo.cs">
+      <Link>Editor\Conventions\Foo.cs</Link>
+    </Compile>
+    <Compile Include="OptionalExtras\UnitTests\Editor\Conventions\FooMore.cs">
+      <Link>Editor\Conventions\FooMore.cs</Link>
+    </Compile>
+    <Compile Include="OptionalExtras\UnitTests\Editor\Conventions\TestConvention.cs">
+      <Link>Editor\Conventions\TestConvention.cs</Link>
+    </Compile>
+    <Compile Include="OptionalExtras\UnitTests\Editor\Conventions\TestConvention2.cs">
+      <Link>Editor\Conventions\TestConvention2.cs</Link>
+    </Compile>
+    <Compile Include="OptionalExtras\UnitTests\Editor\Conventions\TestConventionNames.cs">
+      <Link>Editor\Conventions\TestConventionNames.cs</Link>
+    </Compile>
+    <Compile Include="OptionalExtras\UnitTests\Editor\Factories\TestFactory.cs">
+      <Link>Editor\Factories\TestFactory.cs</Link>
+    </Compile>
+    <Compile Include="OptionalExtras\UnitTests\Editor\Factories\Bindings\TestFactoryTo0.cs">
+      <Link>Editor\Factories\Bindings\TestFactoryTo0.cs</Link>
+    </Compile>
+    <Compile Include="OptionalExtras\UnitTests\Editor\Factories\Bindings\TestFactoryTo1.cs">
+      <Link>Editor\Factories\Bindings\TestFactoryTo1.cs</Link>
+    </Compile>
+    <Compile Include="OptionalExtras\UnitTests\Editor\Factories\Bindings\TestFactoryTo5.cs">
+      <Link>Editor\Factories\Bindings\TestFactoryTo5.cs</Link>
+    </Compile>
+    <Compile Include="OptionalExtras\UnitTests\Editor\Factories\Bindings\TestFactoryToFactory0.cs">
+      <Link>Editor\Factories\Bindings\TestFactoryToFactory0.cs</Link>
+    </Compile>
+    <Compile Include="OptionalExtras\UnitTests\Editor\Factories\Bindings\TestFactoryToFactory1.cs">
+      <Link>Editor\Factories\Bindings\TestFactoryToFactory1.cs</Link>
+    </Compile>
+    <Compile Include="OptionalExtras\UnitTests\Editor\Factories\Bindings\TestFactoryToGetter0.cs">
+      <Link>Editor\Factories\Bindings\TestFactoryToGetter0.cs</Link>
+    </Compile>
+    <Compile Include="OptionalExtras\UnitTests\Editor\Factories\Bindings\TestFactoryToInstance0.cs">
+      <Link>Editor\Factories\Bindings\TestFactoryToInstance0.cs</Link>
+    </Compile>
+    <Compile Include="OptionalExtras\UnitTests\Editor\Factories\Bindings\TestFactoryToMethod0.cs">
+      <Link>Editor\Factories\Bindings\TestFactoryToMethod0.cs</Link>
+    </Compile>
+    <Compile Include="OptionalExtras\UnitTests\Editor\Factories\Bindings\TestFactoryToMethod1.cs">
+      <Link>Editor\Factories\Bindings\TestFactoryToMethod1.cs</Link>
+    </Compile>
+    <Compile Include="OptionalExtras\UnitTests\Editor\Factories\Bindings\TestFactoryToResolve0.cs">
+      <Link>Editor\Factories\Bindings\TestFactoryToResolve0.cs</Link>
+    </Compile>
+    <Compile Include="OptionalExtras\UnitTests\Editor\Factories\Bindings\TestFactoryToSubContainerInstaller0.cs">
+      <Link>Editor\Factories\Bindings\TestFactoryToSubContainerInstaller0.cs</Link>
+    </Compile>
+    <Compile Include="OptionalExtras\UnitTests\Editor\Factories\Bindings\TestFactoryToSubContainerInstaller1.cs">
+      <Link>Editor\Factories\Bindings\TestFactoryToSubContainerInstaller1.cs</Link>
+    </Compile>
+    <Compile Include="OptionalExtras\UnitTests\Editor\Factories\Bindings\TestFactoryToSubContainerMethod0.cs">
+      <Link>Editor\Factories\Bindings\TestFactoryToSubContainerMethod0.cs</Link>
+    </Compile>
+    <Compile Include="OptionalExtras\UnitTests\Editor\Factories\Bindings\TestFactoryToSubContainerMethod1.cs">
+      <Link>Editor\Factories\Bindings\TestFactoryToSubContainerMethod1.cs</Link>
+    </Compile>
+    <Compile Include="OptionalExtras\UnitTests\Editor\Factories\IFactory\TestIFactory.cs">
+      <Link>Editor\Factories\IFactory\TestIFactory.cs</Link>
+    </Compile>
+    <Compile Include="OptionalExtras\UnitTests\Editor\Injection\TestAllInjectionTypes.cs">
+      <Link>Editor\Injection\TestAllInjectionTypes.cs</Link>
+    </Compile>
+    <Compile Include="OptionalExtras\UnitTests\Editor\Injection\TestBaseClassPropertyInjection.cs">
+      <Link>Editor\Injection\TestBaseClassPropertyInjection.cs</Link>
+    </Compile>
+    <Compile Include="OptionalExtras\UnitTests\Editor\Injection\TestCircularDependencies.cs">
+      <Link>Editor\Injection\TestCircularDependencies.cs</Link>
+    </Compile>
+    <Compile Include="OptionalExtras\UnitTests\Editor\Injection\TestConstructorInjection.cs">
+      <Link>Editor\Injection\TestConstructorInjection.cs</Link>
+    </Compile>
+    <Compile Include="OptionalExtras\UnitTests\Editor\Injection\TestConstructorInjectionOptional.cs">
+      <Link>Editor\Injection\TestConstructorInjectionOptional.cs</Link>
+    </Compile>
+    <Compile Include="OptionalExtras\UnitTests\Editor\Injection\TestDuplicateInjection.cs">
+      <Link>Editor\Injection\TestDuplicateInjection.cs</Link>
+    </Compile>
+    <Compile Include="OptionalExtras\UnitTests\Editor\Injection\TestInjectSources.cs">
+      <Link>Editor\Injection\TestInjectSources.cs</Link>
+    </Compile>
+    <Compile Include="OptionalExtras\UnitTests\Editor\Injection\TestListInjection.cs">
+      <Link>Editor\Injection\TestListInjection.cs</Link>
+    </Compile>
+    <Compile Include="OptionalExtras\UnitTests\Editor\Injection\TestNullableValues.cs">
+      <Link>Editor\Injection\TestNullableValues.cs</Link>
+    </Compile>
+    <Compile Include="OptionalExtras\UnitTests\Editor\Injection\TestParameters.cs">
+      <Link>Editor\Injection\TestParameters.cs</Link>
+    </Compile>
+    <Compile Include="OptionalExtras\UnitTests\Editor\Injection\TestPostInjectCall.cs">
+      <Link>Editor\Injection\TestPostInjectCall.cs</Link>
+    </Compile>
+    <Compile Include="OptionalExtras\UnitTests\Editor\Injection\TestPostInjectParameters.cs">
+      <Link>Editor\Injection\TestPostInjectParameters.cs</Link>
+    </Compile>
+    <Compile Include="OptionalExtras\UnitTests\Editor\Injection\TestPropertyInjection.cs">
+      <Link>Editor\Injection\TestPropertyInjection.cs</Link>
+    </Compile>
+    <Compile Include="OptionalExtras\UnitTests\Editor\Injection\TestStructInjection.cs">
+      <Link>Editor\Injection\TestStructInjection.cs</Link>
+    </Compile>
+    <Compile Include="OptionalExtras\UnitTests\Editor\Injection\TestTestOptional.cs">
+      <Link>Editor\Injection\TestTestOptional.cs</Link>
+    </Compile>
+    <Compile Include="OptionalExtras\UnitTests\Editor\Other\TestCircularDependencies.cs">
+      <Link>Editor\Other\TestCircularDependencies.cs</Link>
+    </Compile>
+    <Compile Include="OptionalExtras\UnitTests\Editor\Other\TestConflictingToSingletonUses.cs">
+      <Link>Editor\Other\TestConflictingToSingletonUses.cs</Link>
+    </Compile>
+    <Compile Include="OptionalExtras\UnitTests\Editor\Other\TestFacadeSubContainer.cs">
+      <Link>Editor\Other\TestFacadeSubContainer.cs</Link>
+    </Compile>
+    <Compile Include="OptionalExtras\UnitTests\Editor\Other\TestGenericContract.cs">
+      <Link>Editor\Other\TestGenericContract.cs</Link>
+    </Compile>
+    <Compile Include="OptionalExtras\UnitTests\Editor\Other\TestInheritInSubContainers.cs">
+      <Link>Editor\Other\TestInheritInSubContainers.cs</Link>
+    </Compile>
+    <Compile Include="OptionalExtras\UnitTests\Editor\Other\TestMisc.cs">
+      <Link>Editor\Other\TestMisc.cs</Link>
+    </Compile>
+    <Compile Include="OptionalExtras\UnitTests\Editor\Other\TestMoq.cs">
+      <Link>Editor\Other\TestMoq.cs</Link>
+    </Compile>
+    <Compile Include="OptionalExtras\UnitTests\Editor\Other\TestNestedContainer.cs">
+      <Link>Editor\Other\TestNestedContainer.cs</Link>
+    </Compile>
+    <Compile Include="OptionalExtras\UnitTests\Editor\Other\TestResolveMany.cs">
+      <Link>Editor\Other\TestResolveMany.cs</Link>
+    </Compile>
+    <Compile Include="OptionalExtras\UnitTests\Editor\Other\TestSubContainers.cs">
+      <Link>Editor\Other\TestSubContainers.cs</Link>
+    </Compile>
+    <Compile Include="OptionalExtras\UnitTests\Editor\Other\TestSubContainers4.cs">
+      <Link>Editor\Other\TestSubContainers4.cs</Link>
+    </Compile>
+    <Compile Include="OptionalExtras\UnitTests\Editor\Other\TestTaskUpdater.cs">
+      <Link>Editor\Other\TestTaskUpdater.cs</Link>
+    </Compile>
+    <Compile Include="OptionalExtras\UnitTests\Editor\Other\TestTestUtil.cs">
+      <Link>Editor\Other\TestTestUtil.cs</Link>
+    </Compile>
+    <Compile Include="OptionalExtras\UnitTests\Editor\Other\TestTransientMockProvider.cs">
+      <Link>Editor\Other\TestTransientMockProvider.cs</Link>
+    </Compile>
+    <Compile Include="OptionalExtras\UnitTests\Editor\Other\TestValidateInstaller.cs">
+      <Link>Editor\Other\TestValidateInstaller.cs</Link>
+    </Compile>
+    <Compile Include="OptionalExtras\UnitTests\Editor\Other\ZenjectProfileTest.cs">
+      <Link>Editor\Other\ZenjectProfileTest.cs</Link>
+    </Compile>
+    <Compile Include="OptionalExtras\UnitTests\Editor\Signals\TestSignals.cs">
+      <Link>Editor\Signals\TestSignals.cs</Link>
+    </Compile>
+    <Compile Include="OptionalExtras\UnitTests\Editor\Signals\TestSignalsOneParam.cs">
+      <Link>Editor\Signals\TestSignalsOneParam.cs</Link>
+    </Compile>
+    <Compile Include="OptionalExtras\UnitTests\Editor\Signals\TestSignalsSixParams.cs">
+      <Link>Editor\Signals\TestSignalsSixParams.cs</Link>
+    </Compile>
+    <Compile Include="OptionalExtras\UnitTests\Editor\Signals\TestSignalsWithIdentifiers.cs">
+      <Link>Editor\Signals\TestSignalsWithIdentifiers.cs</Link>
+    </Compile>
+    <Compile Include="OptionalExtras\UnitTests\Editor\Signals\TestTriggers1.cs">
+      <Link>Editor\Signals\TestTriggers1.cs</Link>
+    </Compile>
+    <Compile Include="OptionalExtras\UnitTests\Editor\Util\TestListComparer.cs">
+      <Link>Editor\Util\TestListComparer.cs</Link>
+    </Compile>
+    <Compile Include="OptionalExtras\UnitTests\Editor\Validation\TestValidate1.cs">
+      <Link>Editor\Validation\TestValidate1.cs</Link>
+    </Compile>
+    <Compile Include="OptionalExtras\UnitTests\Editor\Validation\TestValidateFactories.cs">
+      <Link>Editor\Validation\TestValidateFactories.cs</Link>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="OptionalExtras\UnitTests\Editor\BindFeatures\TestMultipleContractTypes.cs.meta">
+      <Link>Editor\BindFeatures\TestMultipleContractTypes.cs.meta</Link>
+    </None>
+    <None Include="OptionalExtras\UnitTests\Editor\BindFeatures\TestMultipleContractTypes2.cs.meta">
+      <Link>Editor\BindFeatures\TestMultipleContractTypes2.cs.meta</Link>
+    </None>
+    <None Include="OptionalExtras\UnitTests\Editor\BindFeatures\TestMultipleContractTypes3.cs.meta">
+      <Link>Editor\BindFeatures\TestMultipleContractTypes3.cs.meta</Link>
+    </None>
+    <None Include="OptionalExtras\UnitTests\Editor\BindFeatures\TestNonLazy.cs.meta">
+      <Link>Editor\BindFeatures\TestNonLazy.cs.meta</Link>
+    </None>
+    <None Include="OptionalExtras\UnitTests\Editor\BindFeatures\TestRebind.cs.meta">
+      <Link>Editor\BindFeatures\TestRebind.cs.meta</Link>
+    </None>
+    <None Include="OptionalExtras\UnitTests\Editor\BindFeatures\TestUnbind.cs.meta">
+      <Link>Editor\BindFeatures\TestUnbind.cs.meta</Link>
+    </None>
+    <None Include="OptionalExtras\UnitTests\Editor\BindFeatures\TestWithArguments.cs.meta">
+      <Link>Editor\BindFeatures\TestWithArguments.cs.meta</Link>
+    </None>
+    <None Include="OptionalExtras\UnitTests\Editor\Bindings\TestTo.cs.meta">
+      <Link>Editor\Bindings\TestTo.cs.meta</Link>
+    </None>
+    <None Include="OptionalExtras\UnitTests\Editor\Bindings\TestToFactory.cs.meta">
+      <Link>Editor\Bindings\TestToFactory.cs.meta</Link>
+    </None>
+    <None Include="OptionalExtras\UnitTests\Editor\Bindings\TestToGetter.cs.meta">
+      <Link>Editor\Bindings\TestToGetter.cs.meta</Link>
+    </None>
+    <None Include="OptionalExtras\UnitTests\Editor\Bindings\TestToInstance.cs.meta">
+      <Link>Editor\Bindings\TestToInstance.cs.meta</Link>
+    </None>
+    <None Include="OptionalExtras\UnitTests\Editor\Bindings\TestToMethod.cs.meta">
+      <Link>Editor\Bindings\TestToMethod.cs.meta</Link>
+    </None>
+    <None Include="OptionalExtras\UnitTests\Editor\Bindings\TestToResolve.cs.meta">
+      <Link>Editor\Bindings\TestToResolve.cs.meta</Link>
+    </None>
+    <None Include="OptionalExtras\UnitTests\Editor\Bindings\TestToSubContainerInstaller.cs.meta">
+      <Link>Editor\Bindings\TestToSubContainerInstaller.cs.meta</Link>
+    </None>
+    <None Include="OptionalExtras\UnitTests\Editor\Bindings\TestToSubContainerMethod.cs.meta">
+      <Link>Editor\Bindings\TestToSubContainerMethod.cs.meta</Link>
+    </None>
+    <None Include="OptionalExtras\UnitTests\Editor\Commands\TestCommandsOne.cs.meta">
+      <Link>Editor\Commands\TestCommandsOne.cs.meta</Link>
+    </None>
+    <None Include="OptionalExtras\UnitTests\Editor\Commands\TestCommandsZero.cs.meta">
+      <Link>Editor\Commands\TestCommandsZero.cs.meta</Link>
+    </None>
+    <None Include="OptionalExtras\UnitTests\Editor\Conditions\TestConditionsBasic.cs.meta">
+      <Link>Editor\Conditions\TestConditionsBasic.cs.meta</Link>
+    </None>
+    <None Include="OptionalExtras\UnitTests\Editor\Conditions\TestConditionsComplex.cs.meta">
+      <Link>Editor\Conditions\TestConditionsComplex.cs.meta</Link>
+    </None>
+    <None Include="OptionalExtras\UnitTests\Editor\Conditions\TestConditionsFieldName.cs.meta">
+      <Link>Editor\Conditions\TestConditionsFieldName.cs.meta</Link>
+    </None>
+    <None Include="OptionalExtras\UnitTests\Editor\Conditions\TestConditionsIdentifier.cs.meta">
+      <Link>Editor\Conditions\TestConditionsIdentifier.cs.meta</Link>
+    </None>
+    <None Include="OptionalExtras\UnitTests\Editor\Conditions\TestConditionsParents.cs.meta">
+      <Link>Editor\Conditions\TestConditionsParents.cs.meta</Link>
+    </None>
+    <None Include="OptionalExtras\UnitTests\Editor\Conditions\TestConditionsTarget.cs.meta">
+      <Link>Editor\Conditions\TestConditionsTarget.cs.meta</Link>
+    </None>
+    <None Include="OptionalExtras\UnitTests\Editor\Conditions\TestConditionsTargetInstance.cs.meta">
+      <Link>Editor\Conditions\TestConditionsTargetInstance.cs.meta</Link>
+    </None>
+    <None Include="OptionalExtras\UnitTests\Editor\Conditions\TestIdentifiers.cs.meta">
+      <Link>Editor\Conditions\TestIdentifiers.cs.meta</Link>
+    </None>
+    <None Include="OptionalExtras\UnitTests\Editor\Conventions\Foo.cs.meta">
+      <Link>Editor\Conventions\Foo.cs.meta</Link>
+    </None>
+    <None Include="OptionalExtras\UnitTests\Editor\Conventions\FooMore.cs.meta">
+      <Link>Editor\Conventions\FooMore.cs.meta</Link>
+    </None>
+    <None Include="OptionalExtras\UnitTests\Editor\Conventions\TestConvention.cs.meta">
+      <Link>Editor\Conventions\TestConvention.cs.meta</Link>
+    </None>
+    <None Include="OptionalExtras\UnitTests\Editor\Conventions\TestConvention2.cs.meta">
+      <Link>Editor\Conventions\TestConvention2.cs.meta</Link>
+    </None>
+    <None Include="OptionalExtras\UnitTests\Editor\Conventions\TestConventionNames.cs.meta">
+      <Link>Editor\Conventions\TestConventionNames.cs.meta</Link>
+    </None>
+    <None Include="OptionalExtras\UnitTests\Editor\Factories\Bindings.meta">
+      <Link>Editor\Factories\Bindings.meta</Link>
+    </None>
+    <None Include="OptionalExtras\UnitTests\Editor\Factories\IFactory.meta">
+      <Link>Editor\Factories\IFactory.meta</Link>
+    </None>
+    <None Include="OptionalExtras\UnitTests\Editor\Factories\TestFactory.cs.meta">
+      <Link>Editor\Factories\TestFactory.cs.meta</Link>
+    </None>
+    <None Include="OptionalExtras\UnitTests\Editor\Factories\Bindings\TestFactoryTo0.cs.meta">
+      <Link>Editor\Factories\Bindings\TestFactoryTo0.cs.meta</Link>
+    </None>
+    <None Include="OptionalExtras\UnitTests\Editor\Factories\Bindings\TestFactoryTo1.cs.meta">
+      <Link>Editor\Factories\Bindings\TestFactoryTo1.cs.meta</Link>
+    </None>
+    <None Include="OptionalExtras\UnitTests\Editor\Factories\Bindings\TestFactoryTo5.cs.meta">
+      <Link>Editor\Factories\Bindings\TestFactoryTo5.cs.meta</Link>
+    </None>
+    <None Include="OptionalExtras\UnitTests\Editor\Factories\Bindings\TestFactoryToFactory0.cs.meta">
+      <Link>Editor\Factories\Bindings\TestFactoryToFactory0.cs.meta</Link>
+    </None>
+    <None Include="OptionalExtras\UnitTests\Editor\Factories\Bindings\TestFactoryToFactory1.cs.meta">
+      <Link>Editor\Factories\Bindings\TestFactoryToFactory1.cs.meta</Link>
+    </None>
+    <None Include="OptionalExtras\UnitTests\Editor\Factories\Bindings\TestFactoryToGetter0.cs.meta">
+      <Link>Editor\Factories\Bindings\TestFactoryToGetter0.cs.meta</Link>
+    </None>
+    <None Include="OptionalExtras\UnitTests\Editor\Factories\Bindings\TestFactoryToInstance0.cs.meta">
+      <Link>Editor\Factories\Bindings\TestFactoryToInstance0.cs.meta</Link>
+    </None>
+    <None Include="OptionalExtras\UnitTests\Editor\Factories\Bindings\TestFactoryToMethod0.cs.meta">
+      <Link>Editor\Factories\Bindings\TestFactoryToMethod0.cs.meta</Link>
+    </None>
+    <None Include="OptionalExtras\UnitTests\Editor\Factories\Bindings\TestFactoryToMethod1.cs.meta">
+      <Link>Editor\Factories\Bindings\TestFactoryToMethod1.cs.meta</Link>
+    </None>
+    <None Include="OptionalExtras\UnitTests\Editor\Factories\Bindings\TestFactoryToResolve0.cs.meta">
+      <Link>Editor\Factories\Bindings\TestFactoryToResolve0.cs.meta</Link>
+    </None>
+    <None Include="OptionalExtras\UnitTests\Editor\Factories\Bindings\TestFactoryToSubContainerInstaller0.cs.meta">
+      <Link>Editor\Factories\Bindings\TestFactoryToSubContainerInstaller0.cs.meta</Link>
+    </None>
+    <None Include="OptionalExtras\UnitTests\Editor\Factories\Bindings\TestFactoryToSubContainerInstaller1.cs.meta">
+      <Link>Editor\Factories\Bindings\TestFactoryToSubContainerInstaller1.cs.meta</Link>
+    </None>
+    <None Include="OptionalExtras\UnitTests\Editor\Factories\Bindings\TestFactoryToSubContainerMethod0.cs.meta">
+      <Link>Editor\Factories\Bindings\TestFactoryToSubContainerMethod0.cs.meta</Link>
+    </None>
+    <None Include="OptionalExtras\UnitTests\Editor\Factories\Bindings\TestFactoryToSubContainerMethod1.cs.meta">
+      <Link>Editor\Factories\Bindings\TestFactoryToSubContainerMethod1.cs.meta</Link>
+    </None>
+    <None Include="OptionalExtras\UnitTests\Editor\Factories\IFactory\TestIFactory.cs.meta">
+      <Link>Editor\Factories\IFactory\TestIFactory.cs.meta</Link>
+    </None>
+    <None Include="OptionalExtras\UnitTests\Editor\Injection\TestAllInjectionTypes.cs.meta">
+      <Link>Editor\Injection\TestAllInjectionTypes.cs.meta</Link>
+    </None>
+    <None Include="OptionalExtras\UnitTests\Editor\Injection\TestBaseClassPropertyInjection.cs.meta">
+      <Link>Editor\Injection\TestBaseClassPropertyInjection.cs.meta</Link>
+    </None>
+    <None Include="OptionalExtras\UnitTests\Editor\Injection\TestCircularDependencies.cs.meta">
+      <Link>Editor\Injection\TestCircularDependencies.cs.meta</Link>
+    </None>
+    <None Include="OptionalExtras\UnitTests\Editor\Injection\TestConstructorInjection.cs.meta">
+      <Link>Editor\Injection\TestConstructorInjection.cs.meta</Link>
+    </None>
+    <None Include="OptionalExtras\UnitTests\Editor\Injection\TestConstructorInjectionOptional.cs.meta">
+      <Link>Editor\Injection\TestConstructorInjectionOptional.cs.meta</Link>
+    </None>
+    <None Include="OptionalExtras\UnitTests\Editor\Injection\TestDuplicateInjection.cs.meta">
+      <Link>Editor\Injection\TestDuplicateInjection.cs.meta</Link>
+    </None>
+    <None Include="OptionalExtras\UnitTests\Editor\Injection\TestInjectSources.cs.meta">
+      <Link>Editor\Injection\TestInjectSources.cs.meta</Link>
+    </None>
+    <None Include="OptionalExtras\UnitTests\Editor\Injection\TestListInjection.cs.meta">
+      <Link>Editor\Injection\TestListInjection.cs.meta</Link>
+    </None>
+    <None Include="OptionalExtras\UnitTests\Editor\Injection\TestNullableValues.cs.meta">
+      <Link>Editor\Injection\TestNullableValues.cs.meta</Link>
+    </None>
+    <None Include="OptionalExtras\UnitTests\Editor\Injection\TestParameters.cs.meta">
+      <Link>Editor\Injection\TestParameters.cs.meta</Link>
+    </None>
+    <None Include="OptionalExtras\UnitTests\Editor\Injection\TestPostInjectCall.cs.meta">
+      <Link>Editor\Injection\TestPostInjectCall.cs.meta</Link>
+    </None>
+    <None Include="OptionalExtras\UnitTests\Editor\Injection\TestPostInjectParameters.cs.meta">
+      <Link>Editor\Injection\TestPostInjectParameters.cs.meta</Link>
+    </None>
+    <None Include="OptionalExtras\UnitTests\Editor\Injection\TestPropertyInjection.cs.meta">
+      <Link>Editor\Injection\TestPropertyInjection.cs.meta</Link>
+    </None>
+    <None Include="OptionalExtras\UnitTests\Editor\Injection\TestStructInjection.cs.meta">
+      <Link>Editor\Injection\TestStructInjection.cs.meta</Link>
+    </None>
+    <None Include="OptionalExtras\UnitTests\Editor\Injection\TestTestOptional.cs.meta">
+      <Link>Editor\Injection\TestTestOptional.cs.meta</Link>
+    </None>
+    <None Include="OptionalExtras\UnitTests\Editor\Other\TestCircularDependencies.cs.meta">
+      <Link>Editor\Other\TestCircularDependencies.cs.meta</Link>
+    </None>
+    <None Include="OptionalExtras\UnitTests\Editor\Other\TestConflictingToSingletonUses.cs.meta">
+      <Link>Editor\Other\TestConflictingToSingletonUses.cs.meta</Link>
+    </None>
+    <None Include="OptionalExtras\UnitTests\Editor\Other\TestFacadeSubContainer.cs.meta">
+      <Link>Editor\Other\TestFacadeSubContainer.cs.meta</Link>
+    </None>
+    <None Include="OptionalExtras\UnitTests\Editor\Other\TestGenericContract.cs.meta">
+      <Link>Editor\Other\TestGenericContract.cs.meta</Link>
+    </None>
+    <None Include="OptionalExtras\UnitTests\Editor\Other\TestInheritInSubContainers.cs.meta">
+      <Link>Editor\Other\TestInheritInSubContainers.cs.meta</Link>
+    </None>
+    <None Include="OptionalExtras\UnitTests\Editor\Other\TestMisc.cs.meta">
+      <Link>Editor\Other\TestMisc.cs.meta</Link>
+    </None>
+    <None Include="OptionalExtras\UnitTests\Editor\Other\TestMoq.cs.meta">
+      <Link>Editor\Other\TestMoq.cs.meta</Link>
+    </None>
+    <None Include="OptionalExtras\UnitTests\Editor\Other\TestNestedContainer.cs.meta">
+      <Link>Editor\Other\TestNestedContainer.cs.meta</Link>
+    </None>
+    <None Include="OptionalExtras\UnitTests\Editor\Other\TestResolveMany.cs.meta">
+      <Link>Editor\Other\TestResolveMany.cs.meta</Link>
+    </None>
+    <None Include="OptionalExtras\UnitTests\Editor\Other\TestSubContainers.cs.meta">
+      <Link>Editor\Other\TestSubContainers.cs.meta</Link>
+    </None>
+    <None Include="OptionalExtras\UnitTests\Editor\Other\TestSubContainers4.cs.meta">
+      <Link>Editor\Other\TestSubContainers4.cs.meta</Link>
+    </None>
+    <None Include="OptionalExtras\UnitTests\Editor\Other\TestTaskUpdater.cs.meta">
+      <Link>Editor\Other\TestTaskUpdater.cs.meta</Link>
+    </None>
+    <None Include="OptionalExtras\UnitTests\Editor\Other\TestTestUtil.cs.meta">
+      <Link>Editor\Other\TestTestUtil.cs.meta</Link>
+    </None>
+    <None Include="OptionalExtras\UnitTests\Editor\Other\TestTransientMockProvider.cs.meta">
+      <Link>Editor\Other\TestTransientMockProvider.cs.meta</Link>
+    </None>
+    <None Include="OptionalExtras\UnitTests\Editor\Other\TestValidateInstaller.cs.meta">
+      <Link>Editor\Other\TestValidateInstaller.cs.meta</Link>
+    </None>
+    <None Include="OptionalExtras\UnitTests\Editor\Other\ZenjectProfileTest.cs.meta">
+      <Link>Editor\Other\ZenjectProfileTest.cs.meta</Link>
+    </None>
+    <None Include="OptionalExtras\UnitTests\Editor\Signals\TestSignals.cs.meta">
+      <Link>Editor\Signals\TestSignals.cs.meta</Link>
+    </None>
+    <None Include="OptionalExtras\UnitTests\Editor\Signals\TestSignalsOneParam.cs.meta">
+      <Link>Editor\Signals\TestSignalsOneParam.cs.meta</Link>
+    </None>
+    <None Include="OptionalExtras\UnitTests\Editor\Signals\TestSignalsSixParams.cs.meta">
+      <Link>Editor\Signals\TestSignalsSixParams.cs.meta</Link>
+    </None>
+    <None Include="OptionalExtras\UnitTests\Editor\Signals\TestSignalsWithIdentifiers.cs.meta">
+      <Link>Editor\Signals\TestSignalsWithIdentifiers.cs.meta</Link>
+    </None>
+    <None Include="OptionalExtras\UnitTests\Editor\Signals\TestTriggers1.cs.meta">
+      <Link>Editor\Signals\TestTriggers1.cs.meta</Link>
+    </None>
+    <None Include="OptionalExtras\UnitTests\Editor\Util\TestListComparer.cs.meta">
+      <Link>Editor\Util\TestListComparer.cs.meta</Link>
+    </None>
+    <None Include="OptionalExtras\UnitTests\Editor\Validation\TestValidate1.cs.meta">
+      <Link>Editor\Validation\TestValidate1.cs.meta</Link>
+    </None>
+    <None Include="OptionalExtras\UnitTests\Editor\Validation\TestValidateFactories.cs.meta">
+      <Link>Editor\Validation\TestValidateFactories.cs.meta</Link>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

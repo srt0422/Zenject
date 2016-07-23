@@ -1,9 +1,28 @@
-﻿<Properties StartupItem="..\UnityProject\Assets\Zenject\OptionalExtras\UnitTests\Editor\Zenject-tests.csproj">
+﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.ItemProperties.Zenject-tests PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench />
+  <MonoDevelop.Ide.Workbench ActiveDocument="OptionalExtras\UnitTests\Editor\Commands\TestCommandsOne.cs">
+    <Files>
+      <File FileName="Binding\Binders\Factory\FactoryFromBinderBase.cs" Line="6" Column="7" />
+      <File FileName="Editor\UnityInspectorListEditor.cs" Line="4" Column="7" />
+      <File FileName="OptionalExtras\CommandsAndSignals\Command\Binders\CommandBinder5.cs" Line="7" Column="117" />
+      <File FileName="Main\DiContainer.cs" Line="14" Column="18" />
+      <File FileName="OptionalExtras\UnitTests\Editor\Commands\TestCommandsOne.cs" Line="5" Column="7" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="Zenject" expanded="True">
+            <Node name="Zenject.Commands" expanded="True">
+              <Node name="References" expanded="True" />
+            </Node>
+            <Node name="Zenject-tests" selected="True" />
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
 </Properties>
